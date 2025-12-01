@@ -1,4 +1,4 @@
-import CTA from "@/sections/cta";
+import Contact from "@/sections/contact";
 import FAQ from "@/sections/faq";
 import Features1 from "@/sections/features-1";
 import Features2 from "@/sections/features-2";
@@ -20,7 +20,7 @@ export default function HomePage() {
       <Testimonials />
       <Pricing />
       <FAQ />
-      <CTA />
+      <Contact />
       <Footer />
     </div>
   )

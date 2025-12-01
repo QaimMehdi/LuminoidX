@@ -62,7 +62,7 @@ export default function Hero() {
         {/* Headline */}
         <h1 className="text-black text-4xl md:text-6xl lg:text-hero font-medium tracking-tight leading-none xl:max-w-3/4">
           <TextBlurEffect className='text-transparent bg-clip-text bg-gradient-to-b from-black to-black/60'>Luminoid</TextBlurEffect>
-          <span className="bg-gradient-to-r from-[#6ECE9D] to-[#4FB882] bg-clip-text text-transparent inline-block">X</span>
+          <TextBlurEffect delayOffset={0.28} className="bg-gradient-to-r from-[#6ECE9D] to-[#4FB882] bg-clip-text text-transparent inline-block">X</TextBlurEffect>
         </h1>
 
         {/* Sub-headline */}

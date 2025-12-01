@@ -15,38 +15,38 @@ const settings = {
   testimonials: [
     {
       quote:
-        "LuminoidX transformed our operations with their AI automation solutions. The workflow integration with n8n and VAPI has saved us countless hours and significantly improved our efficiency.",
-      name: "Sarah Chen",
-      designation: "Operations Director at TechFlow",
-      src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "LuminoidX built our e-commerce automation system that handles order processing and customer support. The n8n workflows they created save us 15+ hours weekly. Highly recommended for Pakistani businesses!",
+      name: "Ahmed Hassan",
+      designation: "CEO at Karachi Digital Solutions",
+      src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=3387&auto=format&fit=crop",
     },
     {
       quote:
-        "The web application they built for us is not only beautiful but incredibly scalable. Our dashboard handles thousands of users seamlessly, and the admin panel is intuitive and powerful.",
-      name: "Michael Rodriguez",
-      designation: "CTO at InnovateSphere",
-      src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "They created a beautiful landing page for our startup that increased our conversions by 35%. The team understood our vision perfectly and delivered ahead of schedule.",
+      name: "Sarah Mitchell",
+      designation: "Founder at GrowthLab",
+      src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=3387&auto=format&fit=crop",
     },
     {
       quote:
-        "Working with LuminoidX was a game-changer. Their AI agents handle customer interactions 24/7, and the custom API integrations they built connect all our systems seamlessly.",
-      name: "Emily Watson",
-      designation: "Founder at CloudScale",
-      src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "Working with LuminoidX was seamless. They automated our inventory management and integrated it with our existing systems. The ROI was visible within the first month.",
+      name: "Fatima Khan",
+      designation: "Operations Manager at Lahore Tech Hub",
+      src: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=3387&auto=format&fit=crop",
     },
     {
       quote:
-        "The landing page they created increased our conversion rate by 40%. Their attention to detail and understanding of our brand made all the difference.",
-      name: "James Kim",
-      designation: "Marketing Lead at DataPro",
-      src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "The custom dashboard they built gives us real-time insights into our business. It's intuitive, fast, and exactly what we needed. Great value for the investment.",
+      name: "Marcus Chen",
+      designation: "Director at DataMetrics Inc",
+      src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=3540&auto=format&fit=crop",
     },
     {
       quote:
-        "LuminoidX delivered exactly what we needed. Their team is professional, responsive, and truly understands how to leverage AI and automation to solve business challenges.",
-      name: "Lisa Thompson",
-      designation: "VP of Technology at FutureNet",
-      src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "LuminoidX helped us automate our client onboarding process using VAPI and custom APIs. What used to take 2 days now happens in minutes. Exceptional work!",
+      name: "Ali Raza",
+      designation: "Co-Founder at Islamabad Ventures",
+      src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=3387&auto=format&fit=crop",
     },
   ]
 }
