@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import LenisProvider from "@/providers/lenis";
+import ParticleEffect from "@/components/particle-effect";
 
 const dmSans = DM_Sans({
   variable: "--font-geist-sans",
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body
         className={`${dmSans.className} antialiased w-full min-h-screen overflow-x-hidden`}
       >
+        <ParticleEffect />
         <LenisProvider>
           {children}
         </LenisProvider>
