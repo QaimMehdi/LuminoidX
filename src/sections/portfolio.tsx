@@ -311,7 +311,7 @@ export default function Portfolio() {
       {/* Title */}
       <SlideEffect>
         <h2 className="text-2xl md:text-4xl lg:text-header capitalize font-medium leading-none text-transparent bg-clip-text bg-gradient-to-b from-black to-black/60 text-center">
-          Enterprise Solutions We've Built
+          Enterprise Solutions We&apos;ve Built
         </h2>
       </SlideEffect>
 
