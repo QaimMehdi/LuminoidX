@@ -2,6 +2,7 @@
 
 import SlideEffect from "@/components/slide-effect"
 import Image from "next/image"
+import * as motion from "motion/react-m"
 
 import uraan from "@/img/uraan.png"
 import finkargo from "@/img/finkargo.webp"
@@ -24,11 +25,10 @@ const companies = [
 ] as const
 
 export default function Clients() {
-  // Duplicate the logos so the track looks like: [1..8, 1..8].
-  // The CSS keyframes will translate this track from 0% to -50%.
-  // Because the second half is identical to the first half,
-  // when the animation restarts there is no visible jump.
+  // two copies so the track can loop seamlessly
   const marqueeItems = [...companies, ...companies]
+  // smaller duration = faster scroll
+  const duration = 10
 
   return (
     <section
@@ -48,8 +48,16 @@ export default function Clients() {
         <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-white to-transparent" />
         <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-white to-transparent" />
 
-        {/* Animated track that slides logos from right to left forever */}
-        <div className="logo-marquee-track flex items-center gap-12 sm:gap-16 lg:gap-20 py-4">
+        <motion.div
+          className="flex items-center gap-14 md:gap-16 lg:gap-20 py-4"
+          animate={{ x: ["0%", "-100%"] }}
+          transition={{
+            duration,
+            repeat: Infinity,
+            ease: "linear",
+            repeatType: "loop",
+          }}
+        >
           {marqueeItems.map((company, index) => (
             <div
               key={`${company.name}-${index}`}
@@ -62,7 +70,7 @@ export default function Clients() {
               />
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )
