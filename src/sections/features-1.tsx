@@ -16,14 +16,15 @@ const settings = {
     title: 'AI Agent Development',
     content: 'We build custom AI agents that integrate seamlessly with your existing tools and workflows. Our expertise includes n8n, VAPI, Make, and custom API integrations to create intelligent automation solutions.',
     carousel_images: [
-      'https://cdn.worldvectorlogo.com/logos/react-2.svg',
-      'https://cdn.worldvectorlogo.com/logos/vue-9.svg',
-      'https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg',
-      'https://cdn.worldvectorlogo.com/logos/nestjs.svg',
-      'https://cdn.worldvectorlogo.com/logos/laravel-2.svg',
-      'https://cdn.worldvectorlogo.com/logos/svelte-1.svg',
-      'https://cdn.worldvectorlogo.com/logos/golang-1.svg',
-      'https://cdn.worldvectorlogo.com/logos/rust.svg',
+      'https://cdn.worldvectorlogo.com/logos/openai-wordmark.svg',
+      'https://cdn.worldvectorlogo.com/logos/claude-3.svg',
+      'https://cdn.worldvectorlogo.com/logos/gemini-ai.svg',
+      'https://cdn.worldvectorlogo.com/logos/langchain-1.svg',
+      'https://cdn.worldvectorlogo.com/logos/tensorflow-2.svg',
+      'https://cdn.worldvectorlogo.com/logos/python-3.svg',
+      'https://cdn.worldvectorlogo.com/logos/huggingface-1.svg',
+      'https://cdn.worldvectorlogo.com/logos/docker.svg',
+      'https://cdn.worldvectorlogo.com/logos/aws-2.svg',
     ]
   },
   card_2: {
@@ -38,14 +39,16 @@ const settings = {
     title: 'Modern Web Development',
     content: 'From landing pages to complex dashboards, we build responsive, scalable web applications. Our solutions include business websites, admin panels, and enterprise-grade web apps that grow with your business.',
     carousel_images: [
-      'https://cdn.worldvectorlogo.com/logos/react-2.svg',
-      'https://cdn.worldvectorlogo.com/logos/vue-9.svg',
-      'https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg',
+      'https://cdn.worldvectorlogo.com/logos/react-academy.svg',
       'https://cdn.worldvectorlogo.com/logos/nextjs-2.svg',
       'https://cdn.worldvectorlogo.com/logos/typescript.svg',
       'https://cdn.worldvectorlogo.com/logos/javascript-1.svg',
       'https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg',
       'https://cdn.worldvectorlogo.com/logos/python-5.svg',
+      'https://cdn.worldvectorlogo.com/logos/docker.svg',
+      'https://cdn.worldvectorlogo.com/logos/aws-2.svg',
+      'https://cdn.worldvectorlogo.com/logos/mysql-2.svg',
+      'https://cdn.worldvectorlogo.com/logos/postgresql-inc.svg',
     ]
   },
 }

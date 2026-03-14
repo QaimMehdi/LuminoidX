@@ -29,3 +29,24 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Logo marquee animation for clients section */
+.logo-marquee-track {
+  /* Ensure the animation runs on the compositor for smoothness */
+  will-change: transform;
+  animation: logo-marquee-slide 8s linear infinite;
+}
+
+@keyframes logo-marquee-slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    /* Move left by half of the track width.
+       Since the track contains [1..8, 1..8],
+       the second half lines up exactly where
+       the first half started, so repeating
+       this animation looks perfectly seamless. */
+    transform: translateX(-50%);
+  }
+}
+

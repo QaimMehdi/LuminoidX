@@ -11,7 +11,6 @@ const settings = {
   navLinks: [
     { name: 'home', href: '/' },
     { name: 'services', href: '#features' },
-    { name: 'portfolio', href: '#portfolio' },
     { name: 'about', href: '#about' },
     { name: 'contact', href: '#contact' },
   ],

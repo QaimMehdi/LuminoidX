@@ -7,7 +7,6 @@ const settings = {
   links: [
     { title: 'About', href: '#about' },
     { title: 'Services', href: '#features' },
-    { title: 'Portfolio', href: '#portfolio' },
     { title: 'Contact', href: '#contact' },
   ],
   socialMedia: [

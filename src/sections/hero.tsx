@@ -16,8 +16,8 @@ const settings = {
     href: '#contact'
   },
   secondaryCTA: {
-    content: 'view portfolio',
-    href: '#portfolio'
+    content: 'view services',
+    href: '#features'
   },
   reviews: [
     {
