@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react'
 import Badge from "@/components/badge"
-import Link from "next/link";
 import Card from "@/components/card"
 import SlideEffect from "@/components/slide-effect"
+import Link from "next/link";
 import { CheckCircle2, ExternalLink, ArrowRight } from "lucide-react"
 import * as motion from "motion/react-m"
 
