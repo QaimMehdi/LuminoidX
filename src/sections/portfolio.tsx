@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import Badge from "@/components/badge"
 import Card from "@/components/card"
+import Link from "next/link";
 import SlideEffect from "@/components/slide-effect"
 import { CheckCircle2, ExternalLink, ArrowRight } from "lucide-react"
 import * as motion from "motion/react-m"
