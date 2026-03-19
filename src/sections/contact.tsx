@@ -35,7 +35,6 @@ export default function Contact() {
         phone: '',
         service: '',
         techStack: '',
-        plan: '',
         budget: '',
         message: ''
     })
@@ -65,7 +64,6 @@ export default function Contact() {
                     phone: '',
                     service: '',
                     techStack: '',
-                    plan: '',
                     budget: '',
                     message: ''
                 })
@@ -85,20 +83,10 @@ export default function Contact() {
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target
-
-        // Reset budget when plan changes
-        if (name === 'plan' && value !== 'enterprise') {
-            setFormData({
-                ...formData,
-                [name]: value,
-                budget: ''
-            })
-        } else {
-            setFormData({
-                ...formData,
-                [name]: value
-            })
-        }
+        setFormData({
+            ...formData,
+            [name]: value
+        })
     }
 
     return (
@@ -232,44 +220,21 @@ export default function Contact() {
                                 />
                             </div>
 
-                            {/* Plan Selection */}
+                            {/* Budget Field */}
                             <div className="space-y-2">
-                                <label htmlFor="plan" className="text-sm font-medium text-black">
-                                    Plan *
+                                <label htmlFor="budget" className="text-sm font-medium text-black">
+                                    Estimated Budget
                                 </label>
-                                <select
-                                    id="plan"
-                                    name="plan"
-                                    required
-                                    value={formData.plan}
+                                <input
+                                    type="text"
+                                    id="budget"
+                                    name="budget"
+                                    value={formData.budget}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 rounded-lg border border-black/10 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all bg-white"
-                                >
-                                    <option value="">Select a plan</option>
-                                    <option value="starter">Starter - Starting at $499</option>
-                                    <option value="growth">Growth - Starting at $1,499</option>
-                                    <option value="enterprise">Enterprise - Custom Pricing</option>
-                                </select>
+                                    className="w-full px-4 py-3 rounded-lg border border-black/10 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+                                    placeholder="e.g., $10,000 - $50,000"
+                                />
                             </div>
-
-                            {/* Conditional Budget Field for Enterprise */}
-                            {formData.plan === 'enterprise' && (
-                                <div className="space-y-2">
-                                    <label htmlFor="budget" className="text-sm font-medium text-black">
-                                        Budget *
-                                    </label>
-                                    <input
-                                        type="text"
-                                        id="budget"
-                                        name="budget"
-                                        required
-                                        value={formData.budget}
-                                        onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-lg border border-black/10 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
-                                        placeholder="e.g., $10,000 - $50,000"
-                                    />
-                                </div>
-                            )}
 
                             {/* Message */}
                             <div className="space-y-2">

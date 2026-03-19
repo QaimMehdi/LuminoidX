@@ -11,15 +11,13 @@ export const metadata: Metadata = {
 
 export default function CaseStudiesPage() {
   return (
-    <div className="relative z-10 px-4 xl:px-0 max-w-5xl mx-auto scroll-smooth pb-10">
+    <main className="relative z-10 scroll-smooth">
       <Navbar />
-      <section className="pt-0 pb-10 md:pb-16">
+      <div className="px-4 xl:px-0 max-w-5xl mx-auto mt-12 space-y-20 md:space-y-32 pb-20">
         <Portfolio />
-      </section>
-      <Contact />
-      <div className="mt-16">
+        <Contact />
         <Footer />
       </div>
-    </div>
+    </main>
   );
 }

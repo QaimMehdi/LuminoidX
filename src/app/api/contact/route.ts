@@ -3,20 +3,12 @@ import { NextRequest, NextResponse } from 'next/server'
 export async function POST(request: NextRequest) {
     try {
         const body = await request.json()
-        const { name, email, phone, service, plan, budget, message } = body
+        const { name, email, phone, service, techStack, budget, message } = body
 
         // Validate required fields
-        if (!name || !email || !service || !plan || !message) {
+        if (!name || !email || !service || !message) {
             return NextResponse.json(
                 { error: 'Missing required fields' },
-                { status: 400 }
-            )
-        }
-
-        // If plan is enterprise, budget is required
-        if (plan === 'enterprise' && !budget) {
-            return NextResponse.json(
-                { error: 'Budget is required for Enterprise plan' },
                 { status: 400 }
             )
         }
@@ -29,8 +21,8 @@ Name: ${name}
 Email: ${email}
 Phone: ${phone || 'Not provided'}
 Service Interest: ${service}
-Plan: ${plan}
-${plan === 'enterprise' ? `Budget: ${budget}` : ''}
+Tech Stack: ${techStack || 'Not provided'}
+Budget: ${budget || 'Not provided'}
 
 Message:
 ${message}
@@ -47,7 +39,7 @@ This email was sent from the LuminoidX contact form.
         if (!RESEND_API_KEY) {
             console.error('RESEND_API_KEY is not configured')
             // Log the form data for manual follow-up
-            console.log('Form submission:', { name, email, phone, service, plan, budget, message })
+            console.log('Form submission:', { name, email, phone, service, techStack, budget, message })
 
             return NextResponse.json(
                 { error: 'Email service not configured. Please contact us directly at hello@luminoidx.com' },
