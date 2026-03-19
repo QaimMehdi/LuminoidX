@@ -11,7 +11,7 @@ const settings = {
   navLinks: [
     { name: "home", href: "/" },
     { name: "services", href: "/services" },
-    { name: "about", href: "#about" },
+    { name: "about", href: "/about" },
     { name: "case studies", href: "/case-studies" },
     { name: "contact", href: "#contact" },
   ],
@@ -59,7 +59,7 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-8 h-full">
-            <ul className="flex items-center gap-6 text-sm font-medium h-full">
+            <ul className="flex items-center gap-6 text-sm font-medium h-full list-none">
               {settings.navLinks.map((link) => {
                 
                 if (link.name !== "services") {
@@ -210,7 +210,7 @@ export default function Navbar() {
             className="lg:hidden absolute top-20 left-0 w-full bg-white border-b border-gray-100 shadow-xl overflow-hidden max-h-[calc(100vh-80px)] overflow-y-auto"
           >
             <div className="px-6 py-8 space-y-6">
-              <ul className="space-y-4">
+              <ul className="space-y-4 list-none">
                 {settings.navLinks.map((link) => {
                   if (link.name !== "services") {
                     return (
