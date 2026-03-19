@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import Badge from "@/components/badge"
+import Link from "next/link";
 import Card from "@/components/card"
 import Link from "next/link";
 import SlideEffect from "@/components/slide-effect"
@@ -119,7 +120,7 @@ export default function Portfolio() {
         </SlideEffect>
         <SlideEffect delay={0.1}>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-b from-black to-black/60">
-            Enterprise Solutions <br className="hidden md:block"/> We&apos;ve Built
+            Enterprise Solutions <br className="hidden md:block" /> We&apos;ve Built
           </h2>
         </SlideEffect>
         <SlideEffect delay={0.2} className="text-sm md:text-base text-gray-500 max-w-2xl mx-auto px-4">
@@ -146,11 +147,11 @@ export default function Portfolio() {
                     </span>
                     <span className="text-[10px] text-gray-400 font-medium">#{project.id}</span>
                   </div>
-                  
+
                   <h3 className="text-xl md:text-2xl font-bold text-black group-hover:text-[#6ECE9D] transition-colors duration-300">
                     {project.title}
                   </h3>
-                  
+
                   <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                     {project.description}
                   </p>

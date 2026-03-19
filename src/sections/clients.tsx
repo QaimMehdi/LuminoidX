@@ -49,8 +49,8 @@ export default function Clients() {
         <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-white to-transparent" />
 
         <motion.div
-          className="flex items-center gap-14 md:gap-16 lg:gap-20 py-4"
-          animate={{ x: ["0%", "-100%"] }}
+          className="flex items-center gap-14 md:gap-16 lg:gap-20 py-4 pr-14 md:pr-16 lg:pr-20 w-max"
+          animate={{ x: ["0%", "-50%"] }}
           transition={{
             duration,
             repeat: Infinity,

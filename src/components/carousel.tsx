@@ -12,16 +12,15 @@ interface CarouselProps {
   duration?: number
 }
 
-export default function Carousel({ 
-  images, 
-  itemWidth = 40, 
-  itemHeight = 40, 
+export default function Carousel({
+  images,
+  itemWidth = 40,
+  itemHeight = 40,
   spacing = 60,
-  duration = 20
+  duration = 15
 }: CarouselProps) {
-  // Triple the images to ensure there's always enough content to cover the view 
-  // and make the transition point invisible.
-  const displayImages = [...images, ...images, ...images]
+  // Use 6 copies for extremely robust seamless looping on all screen sizes
+  const displayImages = [...images, ...images, ...images, ...images, ...images, ...images]
 
   return (
     <div className="overflow-hidden w-full relative h-[60px] flex items-center">
@@ -32,7 +31,7 @@ export default function Carousel({
       <motion.div
         className="flex items-center"
         animate={{
-          x: ["0%", "-33.33%"],
+          x: ["0%", "-16.666%"],
         }}
         transition={{
           duration: duration,
@@ -41,12 +40,13 @@ export default function Carousel({
         }}
         style={{
           gap: `${spacing}px`,
-          paddingLeft: `${spacing / 2}px`
+          paddingRight: `${spacing}px`,
+          width: 'max-content',
         }}
       >
         {displayImages.map((img, index) => (
-          <div 
-            key={index} 
+          <div
+            key={index}
             className="flex-shrink-0"
             style={{ width: `${itemWidth}px`, height: `${itemHeight}px` }}
           >
@@ -55,7 +55,7 @@ export default function Carousel({
               alt={`Tech logo ${index % images.length}`}
               width={100}
               height={100}
-              className="w-full h-full object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+              className="w-full h-full object-contain hover:scale-110 transition-all duration-300"
             />
           </div>
         ))}

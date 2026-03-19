@@ -29,7 +29,7 @@ export default function ServicePageTemplate({ slug }: { slug: string }) {
       {/* Hero */}
       <section className="pt-4 pb-8 md:pb-12 relative border-b border-black/5 mb-10 mt-4">
         <div className="absolute top-0 right-0 w-48 h-48 bg-primary/5 rounded-full blur-3xl -z-10" />
-        
+
         <SlideEffect className="mb-6">
           <Link href="/services" className="inline-flex items-center gap-2 text-[10px] font-bold text-gray-400 hover:text-[#6ECE9D] transition-colors group uppercase tracking-widest">
             <ArrowLeft className="w-2.5 h-2.5 group-hover:-translate-x-1 transition-transform" />
@@ -43,13 +43,13 @@ export default function ServicePageTemplate({ slug }: { slug: string }) {
               <div className="w-1 h-1 rounded-full bg-[#6ECE9D] animate-pulse" />
               Service Excellence
             </div>
-            
+
             <h1 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
               <TextBlurEffect className="text-black inline">
                 {service.title}
               </TextBlurEffect>
             </h1>
-            
+
             <SlideEffect delay={0.3}>
               <p className="text-base md:text-lg font-medium text-gray-500 max-w-xl leading-snug">
                 {service.tagline}
@@ -99,9 +99,8 @@ export default function ServicePageTemplate({ slug }: { slug: string }) {
           {service.features.map((feature, i) => (
             <SlideEffect key={i} delay={i * 0.05} isSpring={false}>
               <motion.div
-                className={`flex items-start gap-3 p-3.5 rounded-xl cursor-pointer transition-all duration-300 ${
-                  activeFeature === i ? 'bg-black text-white shadow-lg' : 'bg-secondary hover:bg-black/5 text-gray-700'
-                }`}
+                className={`flex items-start gap-3 p-3.5 rounded-xl cursor-pointer transition-all duration-300 ${activeFeature === i ? 'bg-black text-white shadow-lg' : 'bg-secondary hover:bg-black/5 text-gray-700'
+                  }`}
                 onClick={() => setActiveFeature(activeFeature === i ? null : i)}
                 whileHover={{ x: 4 }}
                 whileTap={{ scale: 0.98 }}
@@ -124,16 +123,14 @@ export default function ServicePageTemplate({ slug }: { slug: string }) {
           {service.approach.map((step, i) => (
             <SlideEffect key={step.step} direction="top" delay={i * 0.08} isSpring={false}>
               <motion.div
-                className={`relative rounded-xl p-4 text-center cursor-pointer transition-all duration-500 h-full ${
-                  activeStep === i ? 'bg-black text-white shadow-xl' : 'bg-secondary text-black hover:bg-black/5'
-                }`}
+                className={`relative rounded-xl p-4 text-center cursor-pointer transition-all duration-500 h-full ${activeStep === i ? 'bg-black text-white shadow-xl' : 'bg-secondary text-black hover:bg-black/5'
+                  }`}
                 onMouseEnter={() => setActiveStep(i)}
                 onMouseLeave={() => setActiveStep(null)}
                 whileHover={{ y: -4 }}
               >
-                <div className={`absolute top-2 right-2 text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center transition-colors duration-500 ${
-                  activeStep === i ? 'bg-[#6ECE9D] text-black' : 'bg-black/5 text-gray-400'
-                }`}>{i + 1}</div>
+                <div className={`absolute top-2 right-2 text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center transition-colors duration-500 ${activeStep === i ? 'bg-[#6ECE9D] text-black' : 'bg-black/5 text-gray-400'
+                  }`}>{i + 1}</div>
                 <h4 className="font-bold text-sm mb-1.5">{step.step}</h4>
                 <p className={`text-[11px] leading-snug transition-colors duration-500 ${activeStep === i ? 'text-gray-300' : 'text-gray-500'}`}>{step.detail}</p>
                 {i < service.approach.length - 1 && (
