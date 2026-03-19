@@ -10,7 +10,7 @@ import Link from "next/link"
 
 const settings = {
   badge: {
-    number: 4,
+    number: 5,
     text: 'OUR WORKFLOW',
   },
   title: 'How We Work',

@@ -34,6 +34,7 @@ export default function Contact() {
         email: '',
         phone: '',
         service: '',
+        techStack: '',
         plan: '',
         budget: '',
         message: ''
@@ -63,6 +64,7 @@ export default function Contact() {
                     email: '',
                     phone: '',
                     service: '',
+                    techStack: '',
                     plan: '',
                     budget: '',
                     message: ''
@@ -203,12 +205,31 @@ export default function Contact() {
                                         className="w-full px-4 py-3 rounded-lg border border-black/10 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all bg-white"
                                     >
                                         <option value="">Select a service</option>
-                                        <option value="ai-automation">AI Automation</option>
+                                        <option value="ai-agents">AI Agent Development</option>
+                                        <option value="automation">Workflow Automation</option>
+                                        <option value="api-integration">Custom API Integration</option>
                                         <option value="web-development">Web Development</option>
-                                        <option value="full-service">Full Service</option>
+                                        <option value="mobile-development">Mobile App Development</option>
+                                        <option value="quality-assurance">Quality Assurance</option>
                                         <option value="consultation">Consultation</option>
                                     </select>
                                 </div>
+                            </div>
+
+                            {/* Tech Stack */}
+                            <div className="space-y-2">
+                                <label htmlFor="techStack" className="text-sm font-medium text-black">
+                                    Tech Stack
+                                </label>
+                                <input
+                                    type="text"
+                                    id="techStack"
+                                    name="techStack"
+                                    value={formData.techStack}
+                                    onChange={handleChange}
+                                    className="w-full px-4 py-3 rounded-lg border border-black/10 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+                                    placeholder="e.g., React, Node.js, Python, AWS..."
+                                />
                             </div>
 
                             {/* Plan Selection */}
@@ -225,8 +246,8 @@ export default function Contact() {
                                     className="w-full px-4 py-3 rounded-lg border border-black/10 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all bg-white"
                                 >
                                     <option value="">Select a plan</option>
-                                    <option value="starter">Starter - Starting at $800</option>
-                                    <option value="professional">Professional - Starting at $1,500</option>
+                                    <option value="starter">Starter - Starting at $499</option>
+                                    <option value="growth">Growth - Starting at $1,499</option>
                                     <option value="enterprise">Enterprise - Custom Pricing</option>
                                 </select>
                             </div>

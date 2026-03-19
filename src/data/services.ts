@@ -1,0 +1,290 @@
+import {
+  Bot, Zap, Code2, MonitorSmartphone, Smartphone, ShieldCheck,
+  type LucideIcon,
+} from "lucide-react"
+
+export interface ServiceData {
+  id: string
+  icon: LucideIcon
+  color: string
+  title: string
+  tagline: string
+  description: string
+  longDescription: string
+  features: string[]
+  approach: { step: string; detail: string }[]
+  techLogos: string[]
+  stats: { label: string; value: string }[]
+  useCases: string[]
+  relatedServices: string[]
+}
+
+export const allServices: ServiceData[] = [
+  {
+    id: 'ai-agents',
+    icon: Bot,
+    color: '#6ECE9D',
+    title: 'AI Agent Development',
+    tagline: 'Intelligent agents that work for you 24/7',
+    description: 'We build autonomous AI agents that handle complex business tasks — from customer support to data analysis — so your team can focus on high-value work.',
+    longDescription: 'Our AI agents go beyond simple chatbots. We design multi-step reasoning systems that can understand context, make decisions, use external tools, and learn from interactions. Whether you need an intelligent customer support agent, a data analysis pipeline, or a fully autonomous workflow orchestrator — we build it from the ground up and integrate it into your existing tech stack.',
+    features: [
+      'Natural language understanding & generation',
+      'Multi-step reasoning & decision making',
+      'Tool usage & API orchestration',
+      'Continuous learning & improvement',
+      'Custom knowledge base integration',
+      'Multi-channel deployment (web, Slack, WhatsApp)',
+    ],
+    approach: [
+      { step: 'Discovery', detail: 'We map your workflows and identify where agents can add the most value.' },
+      { step: 'Architecture', detail: 'Design the agent\'s reasoning pipeline, tool integrations, and guardrails.' },
+      { step: 'Development', detail: 'Build, train, and fine-tune the agent with your domain-specific data.' },
+      { step: 'Testing', detail: 'Rigorous evaluation against edge cases and adversarial inputs.' },
+      { step: 'Deployment', detail: 'Launch with monitoring, logging, and continuous improvement loops.' },
+    ],
+    techLogos: [
+      'https://cdn.worldvectorlogo.com/logos/openai-wordmark.svg',
+      'https://cdn.worldvectorlogo.com/logos/claude-3.svg',
+      'https://cdn.worldvectorlogo.com/logos/langchain-1.svg',
+      'https://cdn.worldvectorlogo.com/logos/python-3.svg',
+      'https://cdn.worldvectorlogo.com/logos/huggingface-1.svg',
+      'https://cdn.worldvectorlogo.com/logos/docker.svg',
+    ],
+    stats: [
+      { label: 'Response Time', value: '<2s' },
+      { label: 'Accuracy', value: '98%' },
+      { label: 'Tasks Automated', value: '500+' },
+    ],
+    useCases: [
+      'Customer support automation',
+      'Lead qualification & nurturing',
+      'Document analysis & summarization',
+      'Internal knowledge base assistant',
+      'Code review & generation',
+    ],
+    relatedServices: ['automation', 'api-integration'],
+  },
+  {
+    id: 'automation',
+    icon: Zap,
+    color: '#FFDA6E',
+    title: 'Workflow Automation',
+    tagline: 'Eliminate repetitive tasks, amplify productivity',
+    description: 'We design end-to-end automation pipelines that connect your apps, APIs, and databases into self-running systems.',
+    longDescription: 'Manual processes eat into your team\'s productivity. We analyze your workflows, identify bottlenecks, and build intelligent automation that handles everything — from data entry and reporting to complex multi-step business logic. Using platforms like n8n, Make, and custom code, we create automation that scales with your business.',
+    features: [
+      'n8n, Make & Zapier integrations',
+      'Custom webhook & event triggers',
+      'Error handling & retry logic',
+      'Real-time monitoring dashboards',
+      'Scheduled & event-driven workflows',
+      'Data transformation & validation',
+    ],
+    approach: [
+      { step: 'Audit', detail: 'Analyze your existing workflows to find automation opportunities.' },
+      { step: 'Design', detail: 'Map out the automation architecture with triggers, actions, and fallbacks.' },
+      { step: 'Build', detail: 'Implement workflows with robust error handling and logging.' },
+      { step: 'Test', detail: 'End-to-end testing with real data and edge case scenarios.' },
+      { step: 'Monitor', detail: 'Deploy dashboards and alerts for ongoing visibility.' },
+    ],
+    techLogos: [
+      'https://cdn.worldvectorlogo.com/logos/python-5.svg',
+      'https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg',
+      'https://cdn.worldvectorlogo.com/logos/docker.svg',
+      'https://cdn.worldvectorlogo.com/logos/aws-2.svg',
+      'https://cdn.worldvectorlogo.com/logos/postgresql-inc.svg',
+    ],
+    stats: [
+      { label: 'Hours Saved', value: '10K+' },
+      { label: 'Workflows', value: '200+' },
+      { label: 'Uptime', value: '99.9%' },
+    ],
+    useCases: [
+      'CRM data sync & enrichment',
+      'Invoice processing & accounting',
+      'Email & notification triggers',
+      'Report generation & distribution',
+      'Social media scheduling',
+    ],
+    relatedServices: ['ai-agents', 'api-integration'],
+  },
+  {
+    id: 'api-integration',
+    icon: Code2,
+    color: '#A78BFA',
+    title: 'Custom API Integration',
+    tagline: 'Connect everything, seamlessly',
+    description: 'We design robust APIs and integrate third-party services so your systems talk to each other flawlessly.',
+    longDescription: 'In a world of fragmented tools, seamless integration is everything. We build custom APIs from scratch or integrate third-party services — payment gateways, CRMs, social platforms, analytics tools — so your data flows smoothly. With proper authentication, rate limiting, and error handling, your integrations just work.',
+    features: [
+      'RESTful & GraphQL API design',
+      'Third-party SDK integration',
+      'OAuth & secure authentication flows',
+      'Rate limiting & caching strategies',
+      'Webhook & event-driven architectures',
+      'API documentation & versioning',
+    ],
+    approach: [
+      { step: 'Requirements', detail: 'Map out all systems involved and data flow requirements.' },
+      { step: 'API Design', detail: 'Design clean, well-documented endpoints with proper error handling.' },
+      { step: 'Integration', detail: 'Build connectors with retry logic and circuit breakers.' },
+      { step: 'Security', detail: 'Implement OAuth, API keys, and rate limiting.' },
+      { step: 'Documentation', detail: 'Deliver comprehensive API docs and integration guides.' },
+    ],
+    techLogos: [
+      'https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg',
+      'https://cdn.worldvectorlogo.com/logos/typescript.svg',
+      'https://cdn.worldvectorlogo.com/logos/python-5.svg',
+      'https://cdn.worldvectorlogo.com/logos/docker.svg',
+      'https://cdn.worldvectorlogo.com/logos/aws-2.svg',
+      'https://cdn.worldvectorlogo.com/logos/mysql-2.svg',
+    ],
+    stats: [
+      { label: 'APIs Built', value: '150+' },
+      { label: 'Avg Latency', value: '<50ms' },
+      { label: 'Integrations', value: '80+' },
+    ],
+    useCases: [
+      'Payment gateway integrations',
+      'CRM & ERP connectivity',
+      'Social media API wrappers',
+      'Analytics & reporting pipelines',
+      'Multi-tenant SaaS backends',
+    ],
+    relatedServices: ['web-development', 'automation'],
+  },
+  {
+    id: 'web-development',
+    icon: MonitorSmartphone,
+    color: '#38BDF8',
+    title: 'Modern Web Development',
+    tagline: 'Fast, scalable, beautiful web applications',
+    description: 'From sleek landing pages to enterprise dashboards, we build production-ready web applications using the latest frameworks.',
+    longDescription: 'Every pixel matters. We build modern web applications that are fast, accessible, and beautiful — using Next.js, React, and the latest frameworks. Whether it\'s a simple landing page, a complex SaaS dashboard, or an e-commerce platform, we deliver production-ready code that scales.',
+    features: [
+      'Next.js, React & modern frontend stacks',
+      'Responsive & accessible design',
+      'Server-side rendering & static generation',
+      'Admin panels & complex dashboards',
+      'E-commerce & payment integrations',
+      'Performance optimization & Core Web Vitals',
+    ],
+    approach: [
+      { step: 'Discovery', detail: 'Understand your brand, users, and business objectives.' },
+      { step: 'Wireframe', detail: 'Create low-fidelity wireframes and user flow maps.' },
+      { step: 'Design', detail: 'High-fidelity mockups with your brand identity.' },
+      { step: 'Develop', detail: 'Component-based development with clean, maintainable code.' },
+      { step: 'Launch', detail: 'Deploy, optimize performance, and set up analytics.' },
+    ],
+    techLogos: [
+      'https://cdn.worldvectorlogo.com/logos/react-academy.svg',
+      'https://cdn.worldvectorlogo.com/logos/nextjs-2.svg',
+      'https://cdn.worldvectorlogo.com/logos/typescript.svg',
+      'https://cdn.worldvectorlogo.com/logos/javascript-1.svg',
+      'https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg',
+      'https://cdn.worldvectorlogo.com/logos/postgresql-inc.svg',
+    ],
+    stats: [
+      { label: 'Lighthouse', value: '95+' },
+      { label: 'Projects', value: '120+' },
+      { label: 'Load Time', value: '<1.5s' },
+    ],
+    useCases: [
+      'Corporate & agency websites',
+      'SaaS dashboards & admin panels',
+      'E-commerce platforms',
+      'Portfolio & personal sites',
+      'Internal business tools',
+    ],
+    relatedServices: ['mobile-development', 'api-integration'],
+  },
+  {
+    id: 'mobile-development',
+    icon: Smartphone,
+    color: '#F472B6',
+    title: 'Mobile App Development',
+    tagline: 'Native experiences on every device',
+    description: 'We craft native and cross-platform mobile apps that feel buttery smooth. From concept to app store.',
+    longDescription: 'Mobile is where your users are. We build native-quality apps using React Native and Flutter, or go fully native with Swift and Kotlin. From startup MVPs to enterprise apps, we handle the entire lifecycle — design, development, testing, and app store launch.',
+    features: [
+      'React Native & Flutter expertise',
+      'Native iOS (Swift) & Android (Kotlin)',
+      'Offline-first architecture',
+      'Push notifications & deep linking',
+      'App store optimization & launch',
+      'In-app payments & subscriptions',
+    ],
+    approach: [
+      { step: 'Concept', detail: 'Define your app\'s value proposition and target audience.' },
+      { step: 'Prototype', detail: 'Interactive prototypes for user testing and validation.' },
+      { step: 'Build', detail: 'Agile development with bi-weekly demos and feedback.' },
+      { step: 'QA', detail: 'Device testing, performance profiling, and accessibility audit.' },
+      { step: 'Launch', detail: 'App store submission, ASO, and post-launch monitoring.' },
+    ],
+    techLogos: [
+      'https://cdn.worldvectorlogo.com/logos/react-academy.svg',
+      'https://cdn.worldvectorlogo.com/logos/flutter-logo.svg',
+      'https://cdn.worldvectorlogo.com/logos/swift-15.svg',
+      'https://cdn.worldvectorlogo.com/logos/kotlin-2.svg',
+      'https://cdn.worldvectorlogo.com/logos/firebase-1.svg',
+      'https://cdn.worldvectorlogo.com/logos/typescript.svg',
+    ],
+    stats: [
+      { label: 'App Rating', value: '4.8★' },
+      { label: 'Downloads', value: '1M+' },
+      { label: 'Platforms', value: '3' },
+    ],
+    useCases: [
+      'Consumer-facing mobile apps',
+      'Enterprise mobility solutions',
+      'On-demand service apps',
+      'Health & fitness trackers',
+      'E-commerce mobile apps',
+    ],
+    relatedServices: ['web-development', 'quality-assurance'],
+  },
+  {
+    id: 'quality-assurance',
+    icon: ShieldCheck,
+    color: '#34D399',
+    title: 'Quality Assurance',
+    tagline: 'Ship with confidence, every time',
+    description: 'Our QA engineers ensure your software is rock-solid before it reaches users.',
+    longDescription: 'Bugs are expensive. Our QA team combines automated testing with manual exploration to catch every issue — from logic errors to UX inconsistencies. We build test suites that run continuously, so you can ship fast with confidence.',
+    features: [
+      'Automated unit & integration testing',
+      'End-to-end browser test suites',
+      'Performance & load testing',
+      'Security vulnerability scanning',
+      'Accessibility (WCAG) compliance',
+      'CI/CD pipeline integration',
+    ],
+    approach: [
+      { step: 'Audit', detail: 'Review existing code and identify testing gaps.' },
+      { step: 'Strategy', detail: 'Define testing pyramid — unit, integration, e2e split.' },
+      { step: 'Automate', detail: 'Build test suites with CI/CD integration.' },
+      { step: 'Execute', detail: 'Run tests, report bugs, and verify fixes.' },
+      { step: 'Monitor', detail: 'Set up continuous testing with real-time dashboards.' },
+    ],
+    techLogos: [
+      'https://cdn.worldvectorlogo.com/logos/typescript.svg',
+      'https://cdn.worldvectorlogo.com/logos/python-5.svg',
+      'https://cdn.worldvectorlogo.com/logos/docker.svg',
+      'https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg',
+    ],
+    stats: [
+      { label: 'Bugs Caught', value: '5K+' },
+      { label: 'Test Coverage', value: '95%' },
+      { label: 'Release Cycles', value: '300+' },
+    ],
+    useCases: [
+      'Pre-launch QA audits',
+      'Continuous integration testing',
+      'Performance benchmarking',
+      'Security penetration testing',
+      'Regression testing suites',
+    ],
+    relatedServices: ['web-development', 'mobile-development'],
+  },
+]
