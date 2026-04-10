@@ -6,8 +6,8 @@ import Image from "next/image"
 
 export default function AboutHero() {
   return (
-    <section className="space-y-8 pb-10">
-      <div className="text-center space-y-4">
+    <section className="space-y-6 pb-8">
+      <div className="text-center space-y-3">
         <SlideEffect>
           <Badge number={1} text="Our Story" />
         </SlideEffect>

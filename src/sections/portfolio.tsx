@@ -10,7 +10,7 @@ import { projects } from "@/data/projects"
 
 export default function Portfolio() {
   return (
-    <div id='portfolio' className="space-y-12 mx-auto">
+    <div id='portfolio' className="space-y-8 mx-auto">
       {/* Badge & Title */}
       <div className="space-y-4 text-center">
         <SlideEffect>

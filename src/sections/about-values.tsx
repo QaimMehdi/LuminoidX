@@ -28,7 +28,7 @@ const values = [
 
 export default function AboutValues() {
   return (
-    <section className="py-10 space-y-10">
+    <section className="py-8 space-y-8">
       <div className="text-center space-y-2">
         <SlideEffect>
           <h2 className="text-2xl md:text-4xl lg:text-header font-bold text-black">What Drives Us</h2>

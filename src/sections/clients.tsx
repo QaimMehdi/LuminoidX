@@ -33,17 +33,8 @@ export default function Clients() {
   return (
     <section
       aria-label="Companies we have worked with"
-      className="w-full space-y-4 md:space-y-6"
+      className="w-full"
     >
-      <SlideEffect className="flex flex-col items-center gap-1 text-center">
-        <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-          companies we&apos;ve worked with
-        </p>
-        <h2 className="text-sm sm:text-base md:text-lg font-medium text-black/80">
-          Trusted by teams at growing businesses
-        </h2>
-      </SlideEffect>
-
       <div className="relative w-full overflow-hidden">
         <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-white to-transparent" />
         <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-white to-transparent" />

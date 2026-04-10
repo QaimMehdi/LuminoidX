@@ -14,7 +14,7 @@ import Clients from "@/sections/clients";
 
 export default function HomePage() {
   return (
-    <div className="relative z-10 px-4 xl:px-0 max-w-5xl mx-auto space-y-16 sm:space-y-20 md:space-y-24 lg:space-y-28 scroll-smooth">
+    <div className="relative z-10 px-4 xl:px-0 max-w-5xl mx-auto space-y-12 sm:space-y-14 md:space-y-16 lg:space-y-20 scroll-smooth">
       <Hero />
       <Clients />
       <Features1 />

@@ -1,5 +1,6 @@
 'use client'
 
+import React from "react";
 import Navbar from "@/components/navbar";
 import SlideEffect from "@/components/slide-effect";
 import TextBlurEffect from "@/components/text-blur-effect";
@@ -22,34 +23,40 @@ const settings = {
   reviews: [
     {
       id: 1,
+      name: "Hammad Ahmed",
+      designation: "Director Manager at Nexum",
+      image: "/reviews/nexum.png",
+    },
+    {
+      id: 2,
       name: "Alex Chen",
       designation: "Founder",
       image:
         "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
     },
     {
-      id: 2,
+      id: 3,
       name: "Sarah Martinez",
       designation: "Co-Founder",
       image:
         "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
     },
     {
-      id: 3,
+      id: 4,
       name: "Jordan Kim",
       designation: "CTO",
       image:
         "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
     },
     {
-      id: 4,
+      id: 5,
       name: "Taylor Brown",
       designation: "Product Lead",
       image:
         "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
     },
     {
-      id: 5,
+      id: 6,
       name: "Morgan Lee",
       designation: "Client",
       image:
@@ -59,11 +66,18 @@ const settings = {
 }
 
 export default function Hero() {
+  const handleReviewClick = () => {
+    const testimonialsSection = document.getElementById('testimonials');
+    if (testimonialsSection) {
+      testimonialsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="space-y-12 md:space-y-20 lg:space-y-28 z-50 relative">
+    <div className="space-y-8 md:space-y-12 lg:space-y-16 z-50 relative">
       <Navbar />
 
-      <section className="flex flex-col gap-8 lg:gap-11 items-center text-center">
+      <section className="flex flex-col gap-6 lg:gap-8 items-center text-center">
         {/* Headline */}
         <h1 className="text-black text-4xl md:text-6xl lg:text-hero font-medium tracking-tight leading-none xl:max-w-3/4">
           <TextBlurEffect className='text-transparent bg-clip-text bg-gradient-to-b from-black to-black/60'>Luminoid</TextBlurEffect>
@@ -108,7 +122,7 @@ export default function Hero() {
           </div>
 
           {/* Reviews */}
-          <div className="flex flex-col md:flex-row gap-2 md:gap-5 justify-center">
+          <div className="flex flex-col md:flex-row gap-2 md:gap-5 justify-center cursor-pointer" onClick={handleReviewClick}>
             <AnimatedTooltip items={settings.reviews} />
 
             <div className="flex flex-col justify-center items-center md:items-start gap-1 md:gap-2">
