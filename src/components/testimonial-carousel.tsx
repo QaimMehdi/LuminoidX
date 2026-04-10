@@ -13,14 +13,14 @@ interface Testimonial {
 }
 
 const testimonials: Testimonial[] = [
-  { id: "1", videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4", name: "Ahmed Hassan", designation: "CEO at Karachi Digital Solutions" },
-  { id: "2", videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4", name: "Sarah Mitchell", designation: "Founder at GrowthLab" },
-  { id: "3", videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4", name: "Fatima Khan", designation: "Operations Manager" },
-  { id: "4", videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4", name: "Marcus Chen", designation: "Director at DataMetrics Inc" },
-  { id: "5", videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4", name: "Ali Raza", designation: "Co-Founder" },
-  { id: "6", videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4", name: "Emily Davis", designation: "Marketing Head" },
-  { id: "7", videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4", name: "Michael Brown", designation: "CTO" },
-  { id: "8", videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4", name: "Jessica Wilson", designation: "Product Manager" },
+  { id: "1", videoUrl: "/reviews/nexum.mp4", name: "Hammad Ahmed", designation: "Director Manager at Nexum" },
+  { id: "2", videoUrl: "/reviews/nexum.mp4", name: "Hammad Ahmed", designation: "Director Manager at Nexum" },
+  { id: "3", videoUrl: "/reviews/nexum.mp4", name: "Hammad Ahmed", designation: "Director Manager at Nexum" },
+  { id: "4", videoUrl: "/reviews/nexum.mp4", name: "Hammad Ahmed", designation: "Director Manager at Nexum" },
+  { id: "5", videoUrl: "/reviews/nexum.mp4", name: "Hammad Ahmed", designation: "Director Manager at Nexum" },
+  { id: "6", videoUrl: "/reviews/nexum.mp4", name: "Hammad Ahmed", designation: "Director Manager at Nexum" },
+  { id: "7", videoUrl: "/reviews/nexum.mp4", name: "Hammad Ahmed", designation: "Director Manager at Nexum" },
+  { id: "8", videoUrl: "/reviews/nexum.mp4", name: "Hammad Ahmed", designation: "Director Manager at Nexum" },
 ];
 
 export default function TestimonialCarousel() {
@@ -103,14 +103,10 @@ export default function TestimonialCarousel() {
               }}
               drag="x"
               dragConstraints={{ left: 0, right: 0 }}
-              dragElastic={0.8}
+              dragElastic={0.2}
               onDragEnd={(e, { offset: dragOffset, velocity }) => {
-                const swipePower = Math.abs(dragOffset.x) * velocity.x;
-                if (dragOffset.x < -40 || swipePower < -100) {
-                  handleNext();
-                } else if (dragOffset.x > 40 || swipePower > 100) {
-                  handlePrev();
-                }
+                // Single item stays centered - return to center on drag
+                return;
               }}
             >
               <video
@@ -159,6 +155,17 @@ export default function TestimonialCarousel() {
           aria-label="Next video"
         >
           <ChevronRight className="w-5 h-5 md:w-6 md:h-6 group-hover/btn:translate-x-0.5 transition-transform" />
+        </button>
+        <button
+          onClick={() => setIsMuted((prev) => !prev)}
+          className="absolute right-4 md:right-12 top-4 z-50 p-3 md:p-4 rounded-full bg-black/70 hover:bg-black/95 backdrop-blur-md shadow-[0_0_20px_rgba(0,0,0,0.5)] transition-all text-white"
+          aria-label={isMuted ? "Unmute video" : "Mute video"}
+        >
+          {isMuted ? (
+            <VolumeX className="w-5 h-5 md:w-6 md:h-6" />
+          ) : (
+            <Volume2 className="w-5 h-5 md:w-6 md:h-6" />
+          )}
         </button>
       </div>
 
