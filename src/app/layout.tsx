@@ -11,7 +11,10 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: "LuminoidX - AI Automation & Web Development",
-  description: "Transform your business with intelligent AI automation and scalable web development solutions. We build AI agents, automate workflows, and create modern web applications."
+  description: "Transform your business with intelligent AI automation and scalable web development solutions. We build AI agents, automate workflows, and create modern web applications.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
